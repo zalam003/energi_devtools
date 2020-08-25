@@ -11,7 +11,11 @@ FROM alpine:latest
 
 RUN apk add --no-cache ca-certificates
 COPY --from=builder /go/energi3/build/bin/energi3 /usr/local/bin/
+RUN wget https://s3-us-west-2.amazonaws.com/download.energi.software/releases/chaindata/testnet/gen3-chaindata.tar.gz -P /root
+RUN tar xvfz /root/gen3-chaindata.tar.gz --directory /root
+RUN rm /root/gen3-chaindata.tar.gz
 
 # Expose the necessary ports for testnet and mainnet.
 EXPOSE 39795 39796 39797 39797/udp 49795 49796 49797 49797/udp
+
 ENTRYPOINT ["energi3"]

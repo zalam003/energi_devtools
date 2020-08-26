@@ -1,5 +1,5 @@
 ###################################################################################
-#       ENERGI GEN3 3.0.6 CORE NODE MAINNET DOCKER ENVIRONMENT                    #
+#       ENERGI GEN3 3.0.6 CORE NODE MAINNET DOCKER ENVIRONMENT - ALPINE           #
 ###################################################################################
 # Pull Energi Core Node source from Github and compile on a Golang Alpine container.
 FROM golang:1.13.7-alpine as builder
@@ -18,7 +18,7 @@ RUN wget https://s3-us-west-2.amazonaws.com/download.energi.software/releases/ch
 RUN tar xvfz /root/gen3-chaindata.tar.gz --directory /root
 RUN rm /root/gen3-chaindata.tar.gz
 
-# Expose the necessary ports for testnet and mainnet.
+# Expose the necessary ports for mainnet.
 EXPOSE 39795 39796 39797 39797/udp
 
 ENTRYPOINT ["energi3"]

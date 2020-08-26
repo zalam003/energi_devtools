@@ -19,6 +19,6 @@ RUN tar xvfz /root/gen3-chaindata.tar.gz --directory /root
 RUN rm /root/gen3-chaindata.tar.gz
 
 # Expose the necessary ports for testnet and mainnet.
-EXPOSE 39795 39796 39797 39797/udp 49795 49796 49797 49797/udp
+EXPOSE 49795 49796 49797 49797/udp
 
 ENTRYPOINT ["energi3"]

@@ -1,3 +1,6 @@
+###################################################################################
+#       ENERGI GEN3 3.0.6 CORE NODE TESTNET DOCKER ENVIRONMENT                    #
+###################################################################################
 # Pull Energi Core Node source from Github and compile on a Golang Alpine container.
 FROM golang:1.13.7-alpine as builder
 

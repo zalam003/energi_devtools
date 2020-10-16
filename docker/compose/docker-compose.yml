@@ -1,0 +1,26 @@
+version: '3'
+services:
+  mainnet:
+    image: energicryptocurrency/energi3:v3.0.6
+    restart: on-failure
+    container_name: energi_mainnet
+    command: --masternode --mine --rpc --rpccorsdomain "*" --rpcvhosts "*" --rpcaddr "0.0.0.0" --rpcport 39796 --rpcapi admin,eth,web3,rpc,personal,energi --ws --wsorigins "*" --wsaddr "0.0.0.0" --wsport 39795 --wsapi admin,eth,net,web3,personal,energi
+    volumes:
+      - .energicore3:/root/.energicore3:rw
+    ports:
+      - "39795:39795"
+      - "39796:39796"
+      - "39797:39797"
+      - "39797:39797/udp"
+  testnet:
+    image: energicryptocurrency/energi3:v3.0.6
+    restart: on-failure
+    container_name: energi_testnet
+    command: --testnet --masternode --mine --rpc --rpccorsdomain "*" --rpcvhosts "*" --rpcaddr "0.0.0.0" --rpcport 49796 --rpcapi admin,eth,web3,rpc,personal,energi --ws --wsorigins "*" --wsaddr "0.0.0.0" --wsport 49795 --wsapi admin,eth,net,web3,personal,energi
+    volumes:
+      - .energicore3:/root/.energicore3:rw
+    ports:
+      - "49795:49795"
+      - "49796:49796"
+      - "49797:49797"
+      - "49797:49797/udp"

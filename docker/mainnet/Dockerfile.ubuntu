@@ -1,5 +1,5 @@
 ###################################################################################
-#       ENERGI GEN3 3.0.6 CORE NODE MAINNET DOCKER ENVIRONMENT - UBUNTU           #
+#       ENERGI GEN3 3.0.7 CORE NODE MAINNET DOCKER ENVIRONMENT - UBUNTU           #
 ###################################################################################
 # Pull the latest Ubuntu image and Core Node Binaries
 FROM ubuntu:latest
@@ -7,9 +7,9 @@ FROM ubuntu:latest
 RUN apt update
 RUN apt install -y wget
 
-RUN wget https://s3-us-west-2.amazonaws.com/download.energi.software/releases/energi3/3.0.6/energi3-3.0.6-linux-amd64.tgz
-RUN tar xvfz energi3-3.0.6-linux-amd64.tgz
-RUN mv /energi3-3.0.6-linux-amd64/bin/energi3 /usr/local/bin/
+RUN wget https://s3-us-west-2.amazonaws.com/download.energi.software/releases/energi3/3.0.7/energi3-3.0.7-linux-amd64.tgz
+RUN tar xvfz energi3-3.0.7-linux-amd64.tgz
+RUN mv /energi3-3.0.7-linux-amd64/bin/energi3 /usr/local/bin/
 RUN wget https://s3-us-west-2.amazonaws.com/download.energi.software/releases/chaindata/mainnet/gen3-chaindata.tar.gz -P /root
 RUN tar xvfz /root/gen3-chaindata.tar.gz --directory /root
 RUN rm /root/gen3-chaindata.tar.gz

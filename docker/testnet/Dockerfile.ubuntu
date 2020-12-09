@@ -1,5 +1,5 @@
 ###################################################################################
-#       ENERGI GEN3 3.0.6 CORE NODE TESTNET DOCKER ENVIRONMENT - UBUNTU           #
+#       ENERGI GEN3 3.0.7 CORE NODE TESTNET DOCKER ENVIRONMENT - UBUNTU           #
 ###################################################################################
 # Pull the latest Ubuntu image and Core Node Binaries
 FROM ubuntu:latest

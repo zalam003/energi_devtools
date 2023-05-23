@@ -1,7 +1,7 @@
 version: '3'
 services:
   mainnet:
-    image: energicryptocurrency/energi3:v3.0.8
+    image: energicryptocurrency/energi:v1.1.4
     environment: 
       - MYIP
     restart: on-failure
@@ -15,7 +15,7 @@ services:
       - "39797:39797"
       - "39797:39797/udp"
   testnet:
-    image: energicryptocurrency/energi3:v3.0.8
+    image: energicryptocurrency/energi:v1.1.4
     environment: 
       - MYIP
     restart: on-failure
@@ -28,4 +28,3 @@ services:
       - "49796:49796"
       - "49797:49797"
       - "49797:49797/udp"
-
